@@ -45,7 +45,7 @@ Objectif : rendre visibles les disparités territoriales et l'impact de la réfo
    git clone https://github.com/Heneault-IA/[nom-du-repo].git
    cd [nom-du-repo]
 
-Installer les dépendances :Bashpip install -r requirements.txt(Crée un requirements.txt avec : streamlit folium geopandas streamlit-folium)
+Installer les dépendances :Bashpip install -r requirements.txt
 Lancer l'application :Bashstreamlit run app.py
 
 Fichier principal : app.py (contient le code fourni).
