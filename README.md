@@ -50,6 +50,7 @@ Lancer l'application :Bashstreamlit run app.py
 
 Fichier principal : app.py (contient le code fourni).
 Prérequis : Le fichier DataAcadémies.geojson doit être présent dans le dossier du projet (ou au même niveau).
+
 Exemple de tooltip :
 
 Académie : Bordeaux
@@ -57,25 +58,31 @@ Motif Projet éducatif – Refus : 120
 
 Améliorations futures possibles
 
-Ajout des DOM-TOM (géométries séparées)
-Filtre par année scolaire supplémentaire
-Intégration de tendances temporelles (2022 → 2025)
-Export PDF/PNG des cartes
-Version Tableau / Power BI pour comparaison
+- Ajout des DOM-TOM (géométries séparées)
+- Filtre par année scolaire supplémentaire
+- Intégration de tendances temporelles (2022 → 2025)
+- Export PDF/PNG des cartes
+- Version Tableau / Power BI pour comparaison
 
-Lien avec mon profil Data Analyst
-Ce projet illustre ma capacité à :
+Lien avec mon profil Data Analyst, ce projet illustre ma capacité à :
 
-Transformer des données brutes (statistiques + géo) en insights visuels impactants
-Créer des applications data interactives et user-friendly
-Gérer des données géospatiales (GeoJSON, choroplèthes)
-Optimiser les performances (caching)
+- Transformer des données brutes (statistiques + géo) en insights visuels impactants
+- Créer des applications data interactives et user-friendly
+- Gérer des données géospatiales (GeoJSON, choroplèthes)
+- Optimiser les performances (caching)
 
 Auteur
+
 Thomas Heneault
+
 Data Analyst | Python, SQL, Power BI, Géovisualisation
-GitHub: https://github.com/Heneault-IA/Projects
+
+GitHub: https://github.com/Heneault-IA/
+
 LinkedIn: https://www.linkedin.com/in/thomas-heneault-b955b2173/
+
 Mail: heneault.t@outlook.com
+
 N'hésite pas à forker ou à me contacter pour suggestions/améliorations !
+
 ⭐ Si ce projet t'intéresse, mets une étoile !
