@@ -9,6 +9,7 @@ Projet personnel réalisé pour démontrer des compétences en **data visualisat
 Depuis la réforme de 2021 (loi "confortant le respect des principes de la République"), l'**Instruction En Famille (IEF)** nécessite une autorisation préalable délivrée par les académies selon 4 motifs principaux + un régime de plein droit (transitoire jusqu'en 2023-2024).
 
 Ce dashboard permet d'explorer :
+
 - Le **volume** de demandes, autorisations et refus
 - Par **motif** (Situation propre à l’enfant, Projet éducatif, Handicap, Autre situation, Plein Droit)
 - Par **académie**
@@ -16,6 +17,20 @@ Ce dashboard permet d'explorer :
 Objectif : rendre visibles les disparités territoriales et l'impact de la réforme sur l'accès à l'IEF.
 
 **Source des données** : Données agrégées par académie issues de réponses ministérielles (Sénat/Assemblée nationale), rapports Cour des comptes et publications publiques (2023-2024). Géométries des académies fusionnées dans un fichier GeoJSON personnalisé.
+
+## Aperçu
+
+### Vue des Demandes
+
+![Demandes](captures/demandes.png)
+
+### Vue des Autorisations
+
+![Autorisations](captures/autorisations.png)
+
+### Vue des Refus
+
+![Refus](captures/refus.png)
 
 ## Fonctionnalités principales
 
@@ -44,6 +59,7 @@ Objectif : rendre visibles les disparités territoriales et l'impact de la réfo
    ```bash
    git clone https://github.com/Heneault-IA/[nom-du-repo].git
    cd [nom-du-repo]
+   ```
 
 Installer les dépendances :Bashpip install -r requirements.txt
 Lancer l'application :Bashstreamlit run app.py

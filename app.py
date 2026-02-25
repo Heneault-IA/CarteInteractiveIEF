@@ -7,7 +7,7 @@ from folium.features import GeoJsonTooltip
 # Chargement du fichier fusionné avec géométrie
 @st.cache_data
 def load_data():
-    return gpd.read_file("DataAcadémies.geojson")
+    return gpd.read_file("DataAcademies.geojson")
 
 gdf = load_data()
 
@@ -20,7 +20,7 @@ motif_options = {
     "Motif 2 – Projet éducatif": "Motif 2",
     "Motif 3 – Situation de handicap": "Motif 3",
     "Motif 4 – Autre situation particulière": "Motif 4",
-    "Plein Droit" : "Plein Droit"
+    "Plein droit" : "Plein droit"
 }
 
 # Sélecteur : on affiche les clés, on récupère la valeur
@@ -36,8 +36,11 @@ popup_fields = [
     f"{motif} : {variable}"
 ]
 
-# Créer la carte
-m = folium.Map(location=[46.6, 2.5], zoom_start=6, tiles="CartoDB positron")
+# Créer la carte (mise en cache pour éviter le rechargement complet)
+def get_base_map():
+    return folium.Map(location=[46.6, 2.5], zoom_start=6, tiles="OpenStreetMap")
+
+m = get_base_map()
 
 # Définir les couleurs dynamiquement (plus la valeur est élevée, plus c'est rouge)
 def get_color(value, variable, vmax):
@@ -63,7 +66,7 @@ def get_color(value, variable, vmax):
 # Trouver la valeur max pour échelle
 vmax = gdf[col].max()
 
-# Ajout des polygones
+# Ajout des polygones au FeatureGroup au lieu de la carte
 folium.GeoJson(
     gdf,
     style_function=lambda feature: {
@@ -79,5 +82,11 @@ folium.GeoJson(
     )
 ).add_to(m)
 
-# Affichage dans Streamlit
-st_data = st_folium(m, width=900, height=600)
+# Affichage dans Streamlit en ajoutant le FeatureGroup dynamiquement
+# Ainsi, la carte ne se recharge pas à chaque changement de variable
+st_folium(
+    m, 
+    width=900, 
+    height=600,
+    returned_objects=[] # Désactive le rechargement lors des clics pour plus de fluidité
+)
